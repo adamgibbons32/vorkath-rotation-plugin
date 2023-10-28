@@ -159,7 +159,7 @@ public class VorkathRotationPlugin extends Plugin
             {
                 if (!executorService.awaitTermination(100, TimeUnit.MILLISECONDS))
                 {
-                    log.warn("Executor service dit not shut down within the allocated timeout.");
+                    log.warn("Executor service did not shut down within the allocated timeout.");
                 }
             }
             catch (InterruptedException ex)
@@ -209,13 +209,8 @@ public class VorkathRotationPlugin extends Plugin
             return false;
         }
 
-        System.out.println("Region ID: " + regionId);
-
-
         int playerX = playerLocation.getRegionX();
         int playerY = playerLocation.getRegionY();
-        System.out.println("Player X: " + playerX);
-        System.out.println("Player Y: " + playerY);
 
         return playerX >= VORKATH_ROOM_X_MIN && playerX <= VORKATH_ROOM_X_MAX
                 && playerY >= VORKATH_ROOM_Y_MIN && playerY <= VORKATH_ROOM_Y_MAX;
